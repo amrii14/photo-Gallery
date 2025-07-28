@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimal Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Gallery</h1>
+
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image nature"><img src="images/img1.jpg" alt="Nature 1" onclick="openLightbox(this)"></div>
+    <div class="image city"><img src="images/img2.jpg" alt="City 1" onclick="openLightbox(this)"></div>
+    <div class="image nature"><img src="images/img3.jpg" alt="Nature 2" onclick="openLightbox(this)"></div>
+    <div class="image city"><img src="images/img4.jpg" alt="City 2" onclick="openLightbox(this)"></div>
+  </div>
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" class="lightbox-img" />
+    <button class="nav prev" onclick="prevImage(event)">&#10094;</button>
+    <button class="nav next" onclick="nextImage(event)">&#10095;</button>
+    <span class="close" onclick="closeLightbox(event)">&times;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
